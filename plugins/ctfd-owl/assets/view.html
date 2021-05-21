@@ -43,16 +43,16 @@
 									   onclick="javascript:loadhint({{ hint.id }})">
 										{% if hint.content %}
 											<small>
-												View Hint
+												查看提示
 											</small>
 										{% else %}
 											{% if hint.cost %}
 												<small>
-													Unlock Hint for {{ hint.cost }} points
+													解锁提示需要 {{ hint.cost }} 积分
 												</small>
 											{% else %}
 												<small>
-													View Hint
+													查看提示
 												</small>
 											{% endif %}
 										{% endif %}
