@@ -15,12 +15,11 @@
 			<div class="col-md-6 offset-md-3">
 				{% if confirm_email %}
 					<div class="alert alert-info alert-dismissable submit-row" role="alert">
-						Your email address isn't confirmed!
-						Please check your email to confirm your email address.
+						您的电子邮件地址未确认！
+						请检查您的电子邮件以确认您的电子邮件地址。
 						<br>
 						<br>
-						To have the confirmation email resent please <a href="{{ url_for('auth.confirm') }}">click
-						here.</a>
+						要重新发送确认电子邮件，请 <a href="{{ url_for('auth.confirm') }}">点击这里。</a>
 						<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
 								aria-hidden="true">×</span></button>
 					</div>

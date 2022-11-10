@@ -23,7 +23,7 @@
 					{% endfor %}
 					{% for error in errors %}
 						<div class="alert alert-danger alert-dismissable" role="alert">
-							<span class="sr-only">Error:</span>
+							<span class="sr-only">错误:</span>
 							{{ error }}
 							<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
 									aria-hidden="true">×</span></button>
@@ -31,13 +31,13 @@
 					{% endfor %}
 					{% if user %}
 					<h3 class="text-center">
-						We've sent a confirmation email to {{ user.email }}
+						我们已向发送确认电子邮件 {{ user.email }}
 					</h3>
 
 					<br>
 
 					<h4 class="text-center">
-						Please click the link in that email to confirm your account.
+						请单击该电子邮件中的链接以确认您的帐户。
 					</h4>
 					{% endif %}
 
@@ -46,10 +46,10 @@
 					{% if name %}
 					<form method="POST" action="{{ url_for('auth.confirm') }}">
 						<h4 class="text-center">
-							Need to resend the confirmation email?
+							需要重新发送确认电子邮件吗？
 						</h4>
 						<div class="col-md-12 text-center">
-							<button type="submit" id="submit" tabindex="5" class="btn btn-md btn-primary btn-outlined">Resend</button>
+							<button type="submit" id="submit" tabindex="5" class="btn btn-md btn-primary btn-outlined">重新发送</button>
 						</div>
 						<input type="hidden" name="nonce" value="{{ nonce }}">
 					</form>

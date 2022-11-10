@@ -61,7 +61,7 @@
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-menu">
-                        <span class="sr-only">Toggle navigation</span>
+                        <span class="sr-only">切换导航</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -116,7 +116,7 @@
 						{% if get_config('user_mode') == 'teams' %}
 						<li class="nav-item" id="teams">
 							<a class="nav-link" href="{{ url_for('teams.listing') }}">
-                                <span class="main-link">Teams</span>
+                                <span class="main-link">团队列表</span>
                                 <span class="jewel"></span>
                             </a>
                         
@@ -125,7 +125,7 @@
 					    {% endif %}
 {#                        <li id="scoreboard">#}
 {#                            <a href="{{ url_for('scoreboard.listing') }}">#}
-{#                                <span class="main-link">Scoreboard</span>#}
+{#                                <span class="main-link">计分板</span>#}
 {#                                <span class="jewel"></span>#}
 {#                            </a>#}
 {#                        </li>#}
@@ -141,7 +141,7 @@
 							{% if type == 'admin' %}
 							<li id="admin">
                             <a href="{{ url_for('admin.view') }}">
-                                <span class="main-link">Admin</span>
+                                <span class="main-link">管理后台</span>
                                 <span class="jewel"></span>
                             </a>
                         	</li>
@@ -149,7 +149,7 @@
 							{% if config.user_mode() == "teams" %}
 							<li id="team">
 	                            <a href="{{ url_for('teams.private') }}">
-	                                <span class="main-link">Team</span>
+	                                <span class="main-link">团队信息</span>
 	                                <span class="jewel"></span>
 	                            </a>
 	                        </li>

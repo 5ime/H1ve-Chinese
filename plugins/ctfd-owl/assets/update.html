@@ -1,6 +1,6 @@
 <form method="POST">
 	<div class="form-group">
-		<label for="deployment">Deployment Type<br>
+		<label for="deployment">部署类型<br>
 		</label>
 		<input type="text" class="form-control chal-name" name="deployment" value="{{ challenge.deployment }}">
 	</div>
@@ -22,43 +22,43 @@
 
 <!--	</div>-->
     <div class="form-group">
-		<label for="value">FRP Type<br>
+		<label for="value">FRP 类型<br>
 			<small class="form-text text-muted">
-				This is the frp type of container
+				这是容器的Frp类型
 			</small>
 		</label>
 		<input type="text" class="form-control" name="redirect_type" placeholder="Enter frp type of container" value="{{ challenge.redirect_type }}">
 
 	</div>
     <div class="form-group">
-		<label for="value">FRP Port<br>
+		<label for="value">FRP 端口<br>
 			<small class="form-text text-muted">
-				This is the frp port of container
+				这是容器的Frp端口
 			</small>
 		</label>
 		<input type="text" class="form-control" name="redirect_port" placeholder="Enter frp type of container" value="{{ challenge.redirect_port }}">
 
 	</div>
 	<div class="form-group">
-		<label for="dirname">Dirname<br>
+		<label for="dirname">目录名称<br>
 			<small class="form-text text-muted">
-				The name of your challenge dirname
+				挑战所在的目录名
 			</small>
 		</label>
 		<input type="text" class="form-control chal-name" name="dirname" value="{{ challenge.dirname }}">
 	</div>
 	<div class="form-group">
-		<label for="name">Name<br>
+		<label for="name">名称<br>
 			<small class="form-text text-muted">
-				The name of your challenge
+				这是挑战的名称
 			</small>
 		</label>
 		<input type="text" class="form-control chal-name" name="name" value="{{ challenge.name }}">
 	</div>
 	<div class="form-group">
-		<label for="category">Category<br>
+		<label for="category">类别<br>
 			<small class="form-text text-muted">
-				The category of your challenge
+				这是挑战的类别
 			</small>
 		</label>
 		<input type="text" class="form-control chal-category" name="category" value="{{ challenge.category }}">
@@ -68,21 +68,21 @@
 		<li class="nav-item">
 			<a class="nav-link active" href="#desc-write" id="desc-write-link" aria-controls="home"
 			   role="tab" data-toggle="tab">
-				Write
+				写入
 			</a>
 		</li>
 		<li class="nav-item">
 			<a class="nav-link" href="#desc-preview" aria-controls="home" role="tab" data-toggle="tab">
-				Preview
+				预览
 			</a>
 		</li>
 	</ul>
 	<div class="tab-content">
 		<div role="tabpanel" class="tab-pane active" id="desc-write">
 			<div class="form-group">
-				<label for="message-text" class="control-label">Message<br>
+				<label for="message-text" class="control-label">消息<br>
 					<small class="form-text text-muted">
-						Use this to give a brief introduction to your challenge.
+						简单介绍一下你的挑战。
 					</small>
 				</label>
 				<textarea id="desc-editor" class="form-control chal-desc-editor" name="description"
@@ -95,36 +95,36 @@
 	</div>
 
 	<div class="form-group">
-		<label for="value">Current Value<br>
+		<label for="value">当前分数<br>
 			<small class="form-text text-muted">
-				This is how many points the challenge is worth right now.
+				这是现在这个挑战多少分。
 			</small>
 		</label>
 		<input type="number" class="form-control chal-value" name="value" value="{{ challenge.value }}" disabled>
 	</div>
 
 	<div class="form-group">
-		<label for="value">Initial Value<br>
+		<label for="value">初始分数<br>
 			<small class="form-text text-muted">
-				This is how many points the challenge was worth initially.
+				这是挑战的初始分数
 			</small>
 		</label>
 		<input type="number" class="form-control chal-initial" name="initial" value="{{ challenge.initial }}" required>
 	</div>
 
 	<div class="form-group">
-		<label for="value">Decay Limit<br>
+		<label for="value">衰减限制<br>
 			<small class="form-text text-muted">
-				The amount of solves before the challenge reaches its minimum value
+				挑战达到最低分数之前的解决量
 			</small>
 		</label>
 		<input type="number" class="form-control chal-decay" name="decay" value="{{ challenge.decay }}" required>
 	</div>
 
 	<div class="form-group">
-		<label for="value">Minimum Value<br>
+		<label for="value">最低分数<br>
 			<small class="form-text text-muted">
-				This is the lowest that the challenge can be worth
+				这是挑战的最低分数
 			</small>
 		</label>
 		<input type="number" class="form-control chal-minimum" name="minimum" value="{{ challenge.minimum }}" required>
@@ -132,8 +132,8 @@
 
 	<div class="form-group">
 		<label>
-			Max Attempts<br>
-			<small class="form-text text-muted">Maximum amount of attempts users receive. Leave at 0 for unlimited.</small>
+			最大尝试次数<br>
+			<small class="form-text text-muted">用户的最大尝试次数。0为不限制。</small>
 		</label>
 
 		<input type="number" class="form-control chal-attempts" name="max_attempts"
@@ -142,19 +142,19 @@
 
 	<div class="form-group">
 		<label>
-			State<br>
-			<small class="form-text text-muted">Changes the state of the challenge (e.g. visible, hidden)</small>
+			状态<br>
+			<small class="form-text text-muted">更改挑战的状态（例如：显示、隐藏）</small>
 		</label>
 
 		<select class="form-control" name="state">
-			<option value="visible" {% if challenge.state == "visible" %}selected{% endif %}>Visible</option>
-			<option value="hidden" {% if challenge.state == "hidden" %}selected{% endif %}>Hidden</option>
+			<option value="visible" {% if challenge.state == "visible" %}selected{% endif %}>显示</option>
+			<option value="hidden" {% if challenge.state == "hidden" %}selected{% endif %}>隐藏</option>
 		</select>
 	</div>
 
 	<div>
 		<button class="btn btn-success btn-outlined float-right" type="submit">
-			Update
+			更新
 		</button>
 	</div>
 </form>

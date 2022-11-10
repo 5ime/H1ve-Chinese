@@ -6,7 +6,7 @@
 			</button>
 			<ul class="nav nav-tabs">
 				<li class="nav-item">
-					<a class="nav-link active" href="#challenge">Challenge</a>
+					<a class="nav-link active" href="#challenge">挑战</a>
 				</li>
 				{% if solves == None %}
 				{% else %}
@@ -29,10 +29,10 @@
 						</div>
 						<span class="challenge-desc">{{ description | safe }}
 {#							<button type="submit" id="start-key" tabindex="5"#}
-{#										class="btn btn-md btn-outline-secondary">Start#}
+{#										class="btn btn-md btn-outline-secondary">启动实例#}
 {#								</button>#}
 {#							<button type="submit" id="delete-key" tabindex="5"#}
-{#										class="btn btn-md btn-outline-secondary">Delete#}
+{#										class="btn btn-md btn-outline-secondary">删除实例#}
 {#								</button><span id="instance" style="margin-left: 1rem; display: none;"></span>#}
 						</span>
 						
@@ -82,13 +82,13 @@
 						</div>
                         <div class="card col-md-12" style="width: 100%; background-color: #333333; border: 1px solid #c9cacc; margin: 1rem 0 1rem 0; border-radius: .25rem !important;">
                             <div class="card-body text-center" id="owl-panel">
-                                <h5 class="card-title">Instance Info</h5>
+                                <h5 class="card-title">实例信息</h5>
 
                             </div>
                         </div>
 {#                            <div class="row text-center pb-3">#}
 {#                                <div id="instance-panel" style="width: 100%;">#}
-{#                                    <button type="button" class="btn btn-primary" onclick="window.challenge.boot()">Boot a instance</button>#}
+{#                                    <button type="button" class="btn btn-primary" onclick="window.challenge.boot()">启动实例</button>#}
 {#                                </div>#}
 {#                            </div>#}
 
@@ -118,9 +118,9 @@
 								<table class="table table-striped text-center">
 									<thead>
 									<tr>
-										<td><b>Name</b>
+										<td><b>名字</b>
 										</td>
-										<td><b>Date</b>
+										<td><b>时间</b>
 										</td>
 									</tr>
 									</thead>
