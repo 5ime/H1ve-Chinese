@@ -11,9 +11,9 @@ function loadchal(id) {
 
   if (obj.type === "hidden") {
     ezal({
-      title: "Challenge Hidden!",
-      body: "You haven't unlocked this challenge yet!",
-      button: "Got it!"
+      title: "挑战隐藏！",
+      body: "您尚未解锁此挑战！",
+      button: "确定"
     });
     return;
   }

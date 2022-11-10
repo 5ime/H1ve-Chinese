@@ -54,7 +54,7 @@ function loadInfo () {
         console.log(response);
         if (response.success === false) {
             $('#owl-panel').html(
-                    '<h5 class="card-title">Error</h5>' +
+                    '<h5 class="card-title">错误</h5>' +
                     '<h6 class="card-subtitle mb-2 text-muted" id="owl-challenge-count-down">' + response.msg + '</h6>'
             );
         }
@@ -133,18 +133,18 @@ window.challenge.destroy = function() {
         if(response.success) {
             loadInfo();
             ezal({
-                title: "Success",
+                title: "成功",
                 body: "您的实例已被销毁！",
-                button: "OK"
+                button: "确定"
             });
             stopShowAuto();
         } else {
             $('#owl-button-destroy')[0].innerHTML = "销毁此实例";
             $('#owl-button-destroy')[0].disabled = false;
             ezal({
-                title: "Fail",
+                title: "失败",
                 body: response.msg,
-                button: "OK"
+                button: "确定"
             });
         }
     });
@@ -182,17 +182,17 @@ window.challenge.renew = function() {
         if(response.success) {
             loadInfo();
             ezal({
-                title: "Success",
+                title: "成功",
                 body: "您的实例已续订！",
-                button: "OK"
+                button: "确定"
             });
         } else {
             $('#owl-button-renew')[0].innerHTML = "续订此实例";
             $('#owl-button-renew')[0].disabled = false;
             ezal({
-                title: "Fail",
+                title: "失败",
                 body: response.msg,
-                button: "OK"
+                button: "确定"
             });
         }
     });
@@ -230,17 +230,17 @@ window.challenge.boot = function () {
         if(response.success) {
             loadInfo();
             ezal({
-                title: "Success",
+                title: "成功",
                 body: "您的实例已部署！",
-                button: "OK"
+                button: "确定"
             });
         } else {
             $('#owl-button-boot')[0].innerHTML = "启动实例";
             $('#owl-button-boot')[0].disabled = false;
             ezal({
-                title: "Fail",
+                title: "错误",
                 body: response.msg,
-                button: "OK"
+                button: "确定"
             });
         }
     });

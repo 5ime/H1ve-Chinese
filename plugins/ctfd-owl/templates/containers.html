@@ -127,7 +127,7 @@
             var container_id = $(this).attr("container-id");
             var user_id = $(this).attr("user-id");
 
-            var body = "<span>Are you sure you want to delete <strong>Container #{0}</strong>?</span>".format(
+            var body = "<span>是否确实要删除<strong>容器 #{0}</strong>?</span>".format(
               htmlentities(container_id)
             );
 
@@ -165,7 +165,7 @@
             var challenge_id = $(this).attr("challenge-id");
             var user_id = $(this).attr("user-id");
 
-            var body = "<span>Are you sure you want to renew <strong>Container #{0}</strong>?</span>".format(
+            var body = "<span你确定要续订吗<strong>容器 #{0}</strong>?</span>".format(
               htmlentities(container_id)
             );
 
@@ -187,9 +187,9 @@
                   .then(function(response) {
                     if (response.success) {
                       ezal({
-                            title: "Success",
-                            body: "This instance has been renewed!",
-                            button: "OK"
+                            title: "成功",
+                            body: "此实例已续订！",
+                            button: "确定"
                         });
                     }
                   });

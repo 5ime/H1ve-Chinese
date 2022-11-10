@@ -34,14 +34,14 @@ function loadhint(hintid) {
   hint(hintid).then(function(response) {
     if (response.data.content) {
       ezal({
-        title: "Hint",
+        title: "提示",
         body: md.render(response.data.content),
-        button: "Got it!"
+        button: "确定"
       });
     } else {
       ezq({
-        title: "Unlock Hint?",
-        body: "Are you sure you want to open this hint?",
+        title: "解锁提示?",
+        body: "是否确实要打开此提示？?",
         success: function() {
           var params = {
             target: hintid,
@@ -51,16 +51,16 @@ function loadhint(hintid) {
             if (response.success) {
               hint(hintid).then(function(response) {
                 ezal({
-                  title: "Hint",
+                  title: "提示",
                   body: md.render(response.data.content),
-                  button: "Got it!"
+                  button: "确定"
                 });
               });
             } else {
               ezal({
-                title: "Error",
+                title: "错误",
                 body: md.render(response.errors.score),
-                button: "Got it!"
+                button: "确定"
               });
             }
           });

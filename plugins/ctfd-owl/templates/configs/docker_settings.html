@@ -2,9 +2,9 @@
 	<form method="POST" autocomplete="off" class="w-100">
 {#        <div class="form-group">#}
 {#			<label>#}
-{#				Deploy Mode#}
+{#				部署模式#}
 {#				<small class="form-text text-muted">#}
-{#					Which mode the cotainer deploy#}
+{#					Cotainer部署的模式#}
 {#				</small>#}
 {#			</label>#}
 {#			<select class="form-control" id="set-deploy-select">#}
@@ -15,9 +15,9 @@
 {#		</div>#}
         <div class="form-group">
 			<label>
-				Docker Flag Prefix
+				Docker Flag 前缀
 				<small class="form-text text-muted">
-					Docker flag prefix in containers
+					容器中的Docker Flag 前缀
 				</small>
 			</label>
 			<input type="text" class="form-control" id="docker_flag_prefix" name="docker_flag_prefix" value="{{ configs.get("docker_flag_prefix") }}">
@@ -26,16 +26,16 @@
 			<label>
 				Docker APIs URL
 				<small class="form-text text-muted">
-					Docker APIs URL to connect. (Separated by commas)
+					要连接的Docker API URL。（用逗号分隔）
 				</small>
 			</label>
 			<input type="text" class="form-control" id="docker-api-url" name="docker_api_url" value="{{ configs.get("docker_api_url") }}">
 		</div>
         <div class="form-group">
 			<label>
-				Max Container Count
+				最大容器数
 				<small class="form-text text-muted">
-					Max Container Count
+					最大容器数
 				</small>
 			</label>
 			<input type="text" class="form-control" id="docker-max-container-count" name="docker_max_container_count" value="{{ configs.get("docker_max_container_count") }}">
@@ -43,9 +43,9 @@
 
         <div class="form-group">
 			<label>
-				Max Renewal Times
+				最长续订时间
 				<small class="form-text text-muted">
-					Max Renewal Times
+					最长续订时间
 				</small>
 			</label>
 			<input type="text" class="form-control" id="docker-max-renew-count" name="docker_max_renew_count" value="{{ configs.get("docker_max_renew_count") }}">
@@ -53,9 +53,9 @@
 
 {#        <div class="form-group">#}
 {#			<label>#}
-{#				Docker Auto Connect Containers#}
+{#				Docker自动连接容器#}
 {#				<small class="form-text text-muted">#}
-{#					Decide which container will be connected to multi-container-network automatically. Separated by commas.#}
+{#					确定哪个容器将自动连接到多容器网络。用逗号分隔。#}
 {#				</small>#}
 {#			</label>#}
 {#			<input type="text" class="form-control" id="docker-auto-connect-containers" name="docker_auto_connect_containers" value="{{ configs.get("docker_auto_connect_containers") }}">#}
@@ -63,9 +63,9 @@
 
 {#        <div class="form-group">#}
 {#			<label>#}
-{#				Docker Auto Connect Network#}
+{#				Docker自动连接网络#}
 {#				<small class="form-text text-muted">#}
-{#					Decide which network will be connected for single-container.#}
+{#					确定要为单个容器连接的网络。#}
 {#				</small>#}
 {#			</label>#}
 {#			<input type="text" class="form-control" id="docker-auto-connect-network" name="docker_auto_connect_network" value="{{ configs.get("docker_auto_connect_network") }}">#}
@@ -73,9 +73,9 @@
 
 {#        <div class="form-group">#}
 {#			<label>#}
-{#				Docker Dns Setting#}
+{#				Docker Dns 设置#}
 {#				<small class="form-text text-muted">#}
-{#					Decide which dns will be used in container network.#}
+{#					决定在容器网络中使用哪些DNS。#}
 {#				</small>#}
 {#			</label>#}
 {#			<input type="text" class="form-control" id="docker-dns" name="docker_dns" value="{{ configs.get("docker_dns") }}">#}
@@ -83,10 +83,10 @@
 
 {#        <div class="form-group">#}
 {#			<label>#}
-{#				Docker Swarm Nodes#}
+{#				Docker Swarm节点#}
 {#				<small class="form-text text-muted">#}
-{#					Will pick up one from it, You should set your node with label name=windows-* or name=linux-*. Separated by commas.#}
-{#				</small>#}
+{#					#}
+{#				</small>#}将从中选择一个，您应该使用标签name=windows-*或name=linux-*设置节点。用逗号分隔。
 {#			</label>#}
 {#			<input type="text" class="form-control" id="docker-swarm-nodes" name="docker_swarm_nodes" value="{{ configs.get("docker_swarm_nodes") }}">#}
 {#		</div>#}
